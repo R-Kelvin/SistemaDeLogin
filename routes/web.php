@@ -1,11 +1,11 @@
 <?php
 
-use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/',[HomerController::class,'index'])->name('home');
 
-Route::get('/create-user',[UserController::class, 'create'])->name('user.create');
-Route::post('/store-user',[UserController::class, 'store'])->name('user.store');
+Route::controller(LoginController::class)->group(function(){
+    Route::get('/login','index')->name('login.index');
+    Route::post('/login','store')->name('login.store');
+    Route::get('/logout','destroy')->name('login.destroy');
+});
