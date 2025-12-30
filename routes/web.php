@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\HomerController;
+use App\Http\Controllers\LoginController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/',[HomerController::class,'index'])->name('home');
