@@ -13,3 +13,4 @@ comando para criar uma nova rota com classe pai e classe filho:
 Banco de dados parte 1 - aula 2 - minuto 18:20
     comando para iniciar uma nova tabela
         php artisan migrate
+
