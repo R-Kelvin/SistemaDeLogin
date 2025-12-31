@@ -28,9 +28,12 @@ class UserController extends Controller
         //menssagem de erro ou sucesso ao cadastrar
         //assistir novamente a aula 02 minuto 28:50 em caso de dúvida
 
+
        return redirect() -> route('user.create') -> with('Sucesso','Usuário casdastrado com sucesso!');
     } catch (Exception $e){
         return back() -> withInput() -> with('Erro','Usuário não casdastrado! Tente novamente com outro E-mail.');
+
+    
     }
     }
 }
